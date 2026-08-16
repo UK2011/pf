@@ -1,3 +1,29 @@
+:root {
+  --text-color: #e0e0ca;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(36, 36, 36);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--text-color);
+  z-index: 100;
+
+}
+
+.expand-btn {
+  z-index: 1000;
 }

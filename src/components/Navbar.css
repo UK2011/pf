@@ -1,0 +1,71 @@
+.menu {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 8rem 2rem;
+    color: var(--text-color);
+    z-index: 10;
+    /* pointer-events: none; */
+
+
+}
+
+
+
+/* .menu .is-menu-open {
+    pointer-events: auto;
+} */
+
+.menu-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #282828;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    z-index: -1;
+    opacity: 0;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-family: "DM Serif Display";
+    font-size: 5.5vw;
+    letter-spacing: -1%;
+    line-height: 1.25;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    color: inherit;
+    cursor: pointer;
+
+}
+
+.menu-item.sans {
+    font-family: 'DM Sans';
+    font-weight: 600;
+}
+
+.item-index {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    margin-right: 0.25rem;
+    font-family: 'JetBrains Mono';
+    font-size: 0.65rem;
+    font-weight: 500;
+
+}
+
+.item-end {
+    width: 2px;
+    height: 100px;
+    margin: 0 1.25rem;
+    background: var(--text-color);
+    transform: rotate(20deg) scaleY(0);
+    transform-origin: center center;
+    will-change: transform;
+
+}
