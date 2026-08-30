@@ -173,6 +173,21 @@ const Navbar = () => {
     },
     { scope: containerRef }
   );
+  const handleItemClick = (e) => {
+    e.preventDefault();
+    tlRef.current?.reverse();
+    // setIsMenuOpen(false);
+    if (togglerRef.current) {
+      flickerTextTo(togglerRef.current, "Menu");
+    }
+    const target = document.querySelector(e.currentTarget.getAttribute("href"));
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 800);
+    }
+
+  }
 
   const handleToggle = () => {
     const nextState = !isMenuOpen;
@@ -222,7 +237,7 @@ const Navbar = () => {
           const restLetters = item.label.slice(1).split("");
 
           return (
-            <a key={item.index} className="menu-item" href={item.href}>
+            <a key={item.index} className="menu-item" href={item.href} onClick={handleItemClick}>
               <span className="item-index-wrap">
                 <span className="item-index">{item.index}</span>
               </span>
